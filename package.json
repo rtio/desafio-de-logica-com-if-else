@@ -1,23 +1,4 @@
 {
-  "name": "desafio-de-logica-com-if-else",
-  "version": "1.0.0",
-  "description": "Desafio de lógica de programação com IF/ELSE",
-  "main": "app.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rtio/desafio-logica-if-else.git"
-  },
-  "keywords": [
-    "logica",
-    "javascript",
-    "desafio"
-  ],
-  "author": "Rafael Meneses",
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/rtio/desafio-logica-if-else/issues"
-  },
-  "homepage": "https://github.com/rtio/desafio-logica-if-else#readme",
   "dependencies": {
     "prompt-sync": "^4.2.0"
   }
