@@ -1,6 +1,6 @@
 // 4. **Classificar números**: Crie um programa que peça ao usuário para inserir três números diferentes e, em seguida, imprima os números em ordem crescente.
 
-//const prompt = require('prompt-sync')()
+const prompt = require('prompt-sync')()
 
 const num1 = prompt('Primeiro número? ')
 const num2 = prompt('Segundo número? ')
