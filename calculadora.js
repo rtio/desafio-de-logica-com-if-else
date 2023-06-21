@@ -25,20 +25,15 @@ function geraSaida(num1, num2, resultado, operacao) {
 
 // Calcula o resultado de acordo com a operação informada
 function calcula(num1, num2, operacao) {
-    if (operacao === '+') {
-        return soma(num1, num2);
-    }
-    
-    if (operacao === '-') {
-        return subtracao(num1, num2);
-    }
-
-    if (operacao === '*') {
-        return multiplicacao(num1, num2);
-    }
-
-    if (operacao === '/') {
-        return divisao(num1, num2);
+    switch (operacao) {
+        case '+':
+            return soma(num1, num2);
+        case '-':
+            return subtracao(num1, num2);
+        case '*':
+            return multiplicacao(num1, num2);
+        case '/':
+            return divisao(num1, num2);
     }
 }
 
