@@ -1,22 +1,67 @@
-const prompt = require('prompt-sync')();
+// Soma dois números
+function soma(num1, num2) {
+    return num1 + num2;
+}
 
-const operacao = prompt('Informe a operação desejada (+,-): ');
+// Subtrai dois números
+function subtracao(num1, num2) {
+    return num1 - num2;
+}
 
-const num1 = Number(prompt('Informe o primeiro número: '));
+// Multiplica dois números
+function multiplicacao(num1, num2) {
+    return num1 * num2;
+}
 
-const num2 = Number(prompt('Informe o segundo número: '));
+// Divide dois números
+function divisao(num1, num2) {
+    return num1 / num2;
+}
 
-function calcula() {
+// Gera a saida de texto
+function geraSaida(num1, num2, resultado, operacao) {
+    return `O resultado de ${num1} ${operacao} ${num2} é: ${resultado}`;
+}
+
+// Calcula o resultado de acordo com a operação informada
+function calcula(num1, num2, operacao) {
     if (operacao === '+') {
-        return `O resultado da soma é: ${num1 + num2}`;
+        return soma(num1, num2);
     }
     
     if (operacao === '-') {
-        const subtracao = num1 - num2;
-        return 'O resultado da subtração é: ' + subtracao;
+        return subtracao(num1, num2);
+    }
+
+    if (operacao === '*') {
+        return multiplicacao(num1, num2);
+    }
+
+    if (operacao === '/') {
+        return divisao(num1, num2);
     }
 }
 
-const output = calcula();
+function principal() {
+    // Cria um prompt para entrada de dados
+    const prompt = require('prompt-sync')();
 
-console.log(output);
+    // Captura a operação desejada
+    const operacao = prompt('Informe a operação desejada (+, -, *, /): ');
+
+    // Captura os números
+    const num1 = Number(prompt('Informe o primeiro número: '));
+    const num2 = Number(prompt('Informe o segundo número: '));
+
+    // Calcula o resultado
+    const resultado = calcula(num1, num2, operacao);
+
+    // Gera a saida de texto
+    const saidaDeTexto = geraSaida(num1, num2, resultado, operacao);
+
+    // Imprime o resultado
+    console.log(saidaDeTexto);
+}
+
+// Roda o programa
+principal();
