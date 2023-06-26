@@ -12,9 +12,6 @@
 
 //// FEITO COM FUNÇÃO ////
 
-const prompt = require("prompt-sync")();
-
-const idadeInput = prompt("Digite sua idade: ");
 
 function verificarIdade(idade) {
     if (isNaN(idade)) {
@@ -30,5 +27,16 @@ function verificarIdade(idade) {
     return 'Você é idoso!'
 };
 
-const output = verificarIdade(idadeInput);
-console.log(output);
+function principal() {
+    const prompt = require('prompt-sync')();
+    const idadeInput = prompt('Informe sua idade: ');
+    const output = verificarIdade(idadeInput);
+    console.log(output);
+}
+
+module.exports = {
+    principal
+};
+
+// const output = verificarIdade(idadeInput);
+// console.log(output);
