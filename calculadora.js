@@ -62,5 +62,10 @@ function calcula(numero1, numero2, operacao) {
   }
 };
 
-const output = calcula();
-console.log(output);
+
+module.exports = {
+  principal
+};
+
+// const output = calcula();
+// console.log(output);
