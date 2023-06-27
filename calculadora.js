@@ -39,7 +39,7 @@ function calcula(num1, num2, operacao) {
 
 function principal() {
     // Cria um prompt para entrada de dados
-    const prompt = require('prompt-sync')();
+    const prompt = require('prompt-sync')({sigint: true});
 
     // Captura a operação desejada
     const operacao = prompt('Informe a operação desejada (+, -, *, /): ');
@@ -58,5 +58,9 @@ function principal() {
     console.log(saidaDeTexto);
 }
 
+module.exports = {
+    principal
+}
+
 // Roda o programa
-principal();
+// principal();
