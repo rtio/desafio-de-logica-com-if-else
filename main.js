@@ -32,6 +32,11 @@ do {
         default:
             console.log('Opção inválida!');
     }
+    const continuar = prompt('\nDeseja continuar? (s/n)');
+    if (continuar === 'n') {
+        console.log('Saindo 👋...');
+        condicao = false;
+    }
 } while (condicao);
 
 // Temos um bug! O usuário ao finalizar a execução de um dos programas ao invés de ser
