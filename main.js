@@ -1,5 +1,6 @@
 const calculadora = require('./calculadora.js');
 const idade = require('./idade.js');
+const nota = require('./nota.js');
 const prompt = require('prompt-sync')({sigint: true});
 
 function mostrarMenu(){
@@ -10,6 +11,7 @@ function mostrarMenu(){
     console.log('Escolha uma opção para iniciar um dos programas disponíveis:\n');
     console.log('1 - Calculadora');
     console.log('2 - Verificador de idade');
+    console.log('3 - Calculadora de notas');
     console.log('0 - Sair...');
 }
 
@@ -24,10 +26,13 @@ do {
         case '2':
             idade.principal();
             break;
+        case '3':
+            nota.principal();
+            break;
         case '0':
             console.log('Saindo 👋...');
             condicao = false;
-            break;
+            return;
         default:
             console.log('Opção inválida!');
     }
@@ -37,11 +42,3 @@ do {
         condicao = false;
     }
 } while (condicao);
-
-// Temos um bug! O usuário ao finalizar a execução de um dos programas ao invés de ser
-// questionado se deseja finalizar o programa o menu é exibido novamente. Corrija o bug!
-// O comportamento esperado é que o usuário seja questionado se deseja finalizar o programa
-// ao finalizar a execução de um dos programas.
-// Boa sorte.
-
-// calculadora.principal();
