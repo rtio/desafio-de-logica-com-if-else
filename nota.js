@@ -1,6 +1,10 @@
 function calculaMedia(listaDeNotas) {
-    // calcula a media
-    return 7;
+    let somaTotal = 0;
+    listaDeNotas.forEach(nota => {
+        somaTotal += nota;
+    });
+    media = somaTotal / listaDeNotas.length;
+    return media;
 }
 
 function textoResultado(mediaDoAluno) {
@@ -33,7 +37,6 @@ function principal() {
         const nota = Number(prompt('Digite a nota: '));
         listaDeNotas.push(nota);
     }
-    // Faça o restante da logica.......
 
     const nota = calculaMedia(listaDeNotas);
     const textoMedia = textMediaAluno(nomeAluno, nota);
@@ -43,4 +46,6 @@ function principal() {
     console.log(resultado);
 }
 
-principal();
+module.exports = {
+    principal
+}
